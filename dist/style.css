@@ -1,0 +1,49 @@
+:root{
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.jumbotron{
+    background-color: #b0cde4;
+    margin: 0;
+    padding: 0;
+    color: black;
+    line-height: 1.5;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.main{
+    flex: wrap;
+    
+}
+ .card{
+    border: 3px solid black;
+    border-radius: .3rem;
+    display:inline-block;
+    margin: 5px;
+    width: 20rem;
+    min-height: 250px;
+ }
+
+ .card-title{
+     margin:auto;
+ }
+
+ .card-header{
+    padding: 2.5%;
+    text-align: center;
+    font-size: 24px;
+    background-color: #e1dddd;
+ }
+
+ .card-text{
+     padding: 2.5%;
+     margin:auto;
+ }
+
+ .card
+
+ .card-body {
+    padding: 2.5%;
+    font-size: 18px;
+  }
