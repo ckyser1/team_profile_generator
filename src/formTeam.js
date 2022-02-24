@@ -2,7 +2,7 @@ const Manager = require('../lib/manager');
 const Engineer = require('../lib/engineer')
 const Intern = require('../lib/intern')
 
-
+// function to make the html page
 function makeCards(team) {
   let cards = []
   for(let i = 0; i < team.length; i++) {
@@ -25,6 +25,7 @@ function makeCards(team) {
   return cards.join(``)
 }
 
+// manager div on html page
 let generateManagerCard = (Manager) => {
   return `
   <section class="card">
@@ -46,6 +47,7 @@ let generateManagerCard = (Manager) => {
   `
 }
 
+//engineer div on html
 let generateEngineerCard = (Engineer) => {
   return `
   <section class="card">
@@ -67,6 +69,7 @@ let generateEngineerCard = (Engineer) => {
   `
 };
 
+//intern section on html
 let generateInternCard = (Intern) => {
   return `
   <section class="card">

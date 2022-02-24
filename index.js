@@ -5,35 +5,35 @@ const Intern = require('./lib/intern')
 const fs = require('fs');
 const formTeam = require('./src/formTeam');
 
-
+//manager questions
 team = [];
 const managerQuestions = () => {
     inquirer.prompt([
         {
             type: 'input',
             name: 'name',
-            message: 'What is the team manager\'s name?',
+            message: 'What is the manager\'s name?',
         },
         {
             type: 'input',
             name: 'id',
-            message: 'What is the team manager\'s id?',
+            message: 'What is the manager\'s id?',
         },
         {
             type: 'input',
             name: 'email',
-            message: 'What is the team manager\'s email?',
+            message: 'What is the manager\'s email?',
         },
         {
             type: 'input',
             name: 'officeNumber',
-            message: 'What is the team manager\'s office number?',
+            message: 'What is the manager\'s office number?',
         },
         {
             type: 'list',
             name: 'addMember',
             message: 'What type of team member would you like to add?',
-            choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members'],
+            choices: ['Engineer', 'Intern', 'The team is full'],
         }
     ])
     .then((managerAnswers) => {
@@ -53,6 +53,7 @@ const managerQuestions = () => {
     });
 };
 
+//engineer questions
 const engineerQuestions = () => {
     inquirer.prompt([
         {
@@ -79,7 +80,7 @@ const engineerQuestions = () => {
             type: 'list',
             name: 'addMember',
             message: 'What type of team member would you like to add next?',
-            choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members'],
+            choices: ['Engineer', 'Intern', 'The team is full'],
         }
     ])
     .then((engineerAnswers) => {
@@ -98,6 +99,7 @@ const engineerQuestions = () => {
     })
 };
 
+//intern questions
 const internQuestions = () => {
     inquirer.prompt([
         {
@@ -124,7 +126,7 @@ const internQuestions = () => {
             type: 'list',
             name: 'addMember',
             message: 'What type of team member would you like to add next?',
-            choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members'],
+            choices: ['Engineer', 'Intern', 'The team is full'],
         }
     ])
     .then((internAnswers) => {
@@ -142,10 +144,10 @@ const internQuestions = () => {
         }
     })
 }
-
+//initialize
 managerQuestions();
 
-
+//write to html file
 function writeToFile(filename, data) {
     fs.writeFile(filename, data, (err) => {
         if(err) throw err;
