@@ -1,12 +1,12 @@
-const Engineer = require('../lib/Engineer')
+const Engineer = require('../lib/engineer.js')
 
 describe('Engineer Class', () => {
     describe('Initialization', () => {
         it('Should create an object with an id and name', () => {
-            const engineer = new Engineer(123, 'Tim')
+            const engineer = new Engineer(123, 'Name')
 
             expect(engineer.id).toEqual(123);
-            expect(engineer.name).toEqual('Tim');
+            expect(engineer.name).toEqual('Name');
         });
     });
 });
